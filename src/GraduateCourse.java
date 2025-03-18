@@ -1,36 +1,17 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class GraduateCourse implements Course{
-    private String courseName;
-    private String courseCode;
+public class GraduateCourse extends UndergraduateCourse{
     private String researchFocus;
-    private List<Person> participants;
 
-    public GraduateCourse(String courseName, String courseCode, String researchFocus) {
-        this.courseName = courseName;
-        this.courseCode = courseCode;
+    public GraduateCourse(String courseName, String courseCode,String researchFocus) {
+        super(courseName, courseCode);
         this.researchFocus = researchFocus;
-        this.participants =new ArrayList<>();
     }
 
-    @Override
-    public String getCourseName() {
-        return courseName;
-    }
-
-    @Override
-    public String getCourseCode() {
-        return courseCode;
-    }
-
-    @Override
-    public void addParticipant(Person person) {
-         this.participants.add(person);
-    }
 
     @Override
     public List<Person> getParticipants() {
-        return participants;
+        return this.getParticipants();
     }
 }
