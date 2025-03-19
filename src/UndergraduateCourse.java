@@ -4,7 +4,7 @@ import java.util.List;
 public class UndergraduateCourse implements Course{
     private String courseName;
     private String courseCode;
-    private List<Person> participants;
+    protected List<Person> participants;
 
     public UndergraduateCourse(String courseName, String courseCode) {
         this.courseName = courseName;

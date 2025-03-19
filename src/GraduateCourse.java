@@ -8,10 +8,8 @@ public class GraduateCourse extends UndergraduateCourse{
         super(courseName, courseCode);
         this.researchFocus = researchFocus;
     }
-
-
     @Override
     public List<Person> getParticipants() {
-        return this.getParticipants();
+        return participants;
     }
 }
